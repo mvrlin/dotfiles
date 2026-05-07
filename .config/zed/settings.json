@@ -1,146 +1,220 @@
 {
-  "agent": {
-    "default_profile": "ask",
-    "default_model": {
-      "provider": "deepseek",
-      "model": "deepseek-chat"
-    }
+  "agent_servers": {
+    "codex-acp": {
+      "type": "registry",
+    },
   },
+  "agent": {
+    "default_model": {
+      "effort": "medium",
+      "provider": "zed.dev",
+      "model": "gpt-5.3-codex",
+      "enable_thinking": true,
+    },
+    "dock": "right",
+    "favorite_models": [
+      {
+        "provider": "openrouter",
+        "model": "deepseek/deepseek-v4-pro",
+        "enable_thinking": true,
+      },
+      {
+        "provider": "openrouter",
+        "model": "anthropic/claude-sonnet-4.6",
+        "enable_thinking": true,
+      },
+      {
+        "provider": "openrouter",
+        "model": "anthropic/claude-opus-4.6",
+        "enable_thinking": true,
+      },
+      {
+        "provider": "openrouter",
+        "model": "openrouter/free",
+        "enable_thinking": true,
+      },
+      {
+        "provider": "zed.dev",
+        "model": "gpt-5.3-codex",
+        "enable_thinking": true,
+        "effort": "medium",
+      },
+    ],
+    "flexible": true,
+    "model_parameters": [],
+    "sidebar_side": "right",
+  },
+  "agent_buffer_font_size": 17.5,
+  "agent_ui_font_size": 17.5,
   "auto_install_extensions": {
     "astro": true,
+    "catppuccin": true,
     "dart": true,
-    "fleet-themes": true,
+    "golangci-lint": true,
     "html": true,
     "scss": true,
     "svelte": true,
     "toml": true,
     "vue": true,
-    "xml": true
+    "xml": true,
   },
-  "auto_signature_help": true,
   "auto_update": false,
   "buffer_font_family": "JetBrains Mono NL",
   "buffer_font_size": 17.5,
   "buffer_line_height": {
-    "custom": 1.6
+    "custom": 1.6,
   },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "colorize_brackets": true,
   "confirm_quit": true,
   "cursor_blink": false,
   "diagnostics": {
     "include_warnings": true,
     "inline": {
-      "enabled": true
-    }
+      "enabled": true,
+    },
   },
-  // https://github.com/skarline/zed-fleet-themes/pull/10
-  "experimental.theme_overrides": {
-    "players": [
-      {
-        "selection": "#A8C6F466"
-      }
-    ]
+  "diff_view_style": "unified",
+  "edit_predictions": {
+    "provider": "none",
   },
-  "features": {
-    "edit_prediction_provider": "none"
+  "file_scan_exclusions": ["**/*.meta"],
+  "file_types": {
+    "JSON": ["*.arb"],
   },
   "git_panel": {
     "dock": "right",
-    "status_style": "label_color"
+    "sort_by_path": false,
+    "status_style": "label_color",
+    "tree_view": false,
   },
   "gutter": {
-    "runnables": false
+    "runnables": false,
   },
+  "inline_code_actions": false,
   "languages": {
+    "Go": {
+      "language_servers": ["gopls", "golangci-lint"],
+    },
     "JavaScript": {
-      "formatter": {
-        "code_actions": {
-          "source.fixAll.eslint": true
-        }
-      }
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true,
+      },
+      "formatter": [],
     },
     "JSON": {
-      "format_on_save": "off"
+      "format_on_save": "off",
+    },
+    "JSONC": {
+      "language_servers": [],
     },
     "Rust": {
-      "tab_size": 4
+      "tab_size": 4,
     },
     "SCSS": {
-      "format_on_save": "off"
+      "format_on_save": "off",
     },
     "TypeScript": {
-      "formatter": {
-        "code_actions": {
-          "source.fixAll.eslint": true
-        }
-      }
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true,
+      },
+      "formatter": [],
     },
     "Vue.js": {
-      "formatter": {
-        "code_actions": {
-          "source.fixAll.eslint": true
-        }
-      }
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true,
+      },
+      "formatter": [],
     },
     "XML": {
-      "format_on_save": "off"
+      "format_on_save": "off",
     },
     "YAML": {
-      "format_on_save": "off"
-    }
+      "format_on_save": "off",
+    },
   },
   "lsp": {
     "dart": {
       "settings": {
-        "lineLength": 100
-      }
+        "lineLength": 100,
+      },
+    },
+    "golangci-lint": {
+      "initialization_options": {
+        "command": [
+          "golangci-lint",
+          "run",
+          "--output.json.path",
+          "stdout",
+          "--show-stats=false",
+          "--output.text.path=",
+        ],
+      },
     },
     "vtsls": {
       "settings": {
+        "javascript": {
+          "tsserver": {
+            "experimental": {},
+            "maxTsServerMemory": 8092,
+          },
+        },
         "typescript": {
           "tsserver": {
-            "experimental": {
-              // "enableProjectDiagnostics": true
-            }
-          }
-        }
-      }
-    }
+            "experimental": {},
+            "maxTsServerMemory": 16184,
+          },
+        },
+      },
+    },
   },
   "on_last_window_closed": "quit_app",
+  "outline_panel": {
+    "dock": "left",
+  },
   "preview_tabs": {
     "enabled": false,
-    "enable_preview_from_code_navigation": false
+    "enable_keep_preview_on_code_navigation": false,
   },
   "project_panel": {
-    "indent_size": 12
+    "dock": "left",
+    "indent_size": 12,
   },
-  "relative_line_numbers": true,
+  "relative_line_numbers": "enabled",
+  "show_whitespaces": "boundary",
   "soft_wrap": "none",
   "tab_size": 2,
   "tabs": {
     "file_icons": true,
     "git_status": true,
     "show_close_button": "hidden",
-    "show_diagnostics": "all"
+    "show_diagnostics": "all",
   },
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
   "terminal": {
-    "font_family": "JetBrains Mono NL"
+    "font_size": 17.5,
+    "line_height": {
+      "custom": 1.7,
+    },
+    "toolbar": {
+      "breadcrumbs": false,
+    },
   },
-  "theme": "Fleet Light",
+  "theme": "Catppuccin Mocha - No Italics",
   "toolbar": {
     "breadcrumbs": false,
     "quick_actions": false,
-    "selections_menu": false
+    "selections_menu": false,
   },
   "ui_font_family": ".SystemUIFont",
   "ui_font_size": 21,
   "vim": {
-    "use_system_clipboard": "never"
+    "use_system_clipboard": "never",
   },
   "vim_mode": true,
-  "wrap_guides": [80]
 }
