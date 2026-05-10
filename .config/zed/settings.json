@@ -1,51 +1,4 @@
 {
-  "agent_servers": {
-    "codex-acp": {
-      "type": "registry",
-    },
-  },
-  "agent": {
-    "default_model": {
-      "effort": "medium",
-      "provider": "zed.dev",
-      "model": "gpt-5.3-codex",
-      "enable_thinking": true,
-    },
-    "dock": "right",
-    "favorite_models": [
-      {
-        "provider": "openrouter",
-        "model": "deepseek/deepseek-v4-pro",
-        "enable_thinking": true,
-      },
-      {
-        "provider": "openrouter",
-        "model": "anthropic/claude-sonnet-4.6",
-        "enable_thinking": true,
-      },
-      {
-        "provider": "openrouter",
-        "model": "anthropic/claude-opus-4.6",
-        "enable_thinking": true,
-      },
-      {
-        "provider": "openrouter",
-        "model": "openrouter/free",
-        "enable_thinking": true,
-      },
-      {
-        "provider": "zed.dev",
-        "model": "gpt-5.3-codex",
-        "enable_thinking": true,
-        "effort": "medium",
-      },
-    ],
-    "flexible": true,
-    "model_parameters": [],
-    "sidebar_side": "right",
-  },
-  "agent_buffer_font_size": 17.5,
-  "agent_ui_font_size": 17.5,
   "auto_install_extensions": {
     "astro": true,
     "catppuccin": true,
@@ -77,6 +30,7 @@
     },
   },
   "diff_view_style": "unified",
+  "disable_ai": true,
   "edit_predictions": {
     "provider": "none",
   },
@@ -218,3 +172,4 @@
   },
   "vim_mode": true,
 }
+
